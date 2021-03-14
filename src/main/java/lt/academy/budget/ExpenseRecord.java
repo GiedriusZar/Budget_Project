@@ -10,6 +10,7 @@ public class ExpenseRecord {
     private String category;
     private String paymetType;
     private String additionalInfo;
+    private int expenseCounter;
 
     public ExpenseRecord(float amount, String category, String paymetType, String additionalInfo) {
         this.amount = amount;
@@ -17,6 +18,7 @@ public class ExpenseRecord {
         this.category = category;
         this.paymetType = paymetType;
         this.additionalInfo = additionalInfo;
+        this.expenseCounter = Budget.recordCounter;
     }
 
     public float getAmount() {
@@ -57,5 +59,9 @@ public class ExpenseRecord {
 
     public void setAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
+    }
+
+    public int getExpenseCounter() {
+        return expenseCounter;
     }
 }

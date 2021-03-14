@@ -4,11 +4,14 @@ import java.time.LocalDate;
 
 public class IncomeRecord {
 
+
+
     private float amount;
     private LocalDate date;
     private String categoryIndex;
     private String type;
     private String additionalInfo;
+    private int incomeCounter;
 
 
     public IncomeRecord(float amount, String categoryIndex, String toBank, String additionalInfo) {
@@ -17,6 +20,9 @@ public class IncomeRecord {
         this.categoryIndex = categoryIndex;
         this.type = type;
         this.additionalInfo = additionalInfo;
+        this.incomeCounter = Budget.recordCounter;
+
+
     }
 
     public float getAmount() {
@@ -43,7 +49,7 @@ public class IncomeRecord {
         this.categoryIndex = categoryIndex;
     }
 
-    public String type() {
+    public String getType() {
         return type;
     }
 
@@ -58,4 +64,10 @@ public class IncomeRecord {
     public void setAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
     }
+
+    public int getIncomeCounter() {
+        return incomeCounter;
+    }
+
+
 }

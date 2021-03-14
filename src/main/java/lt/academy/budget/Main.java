@@ -11,13 +11,9 @@ public class Main {
 
         String input = "";
 
-        while (!input.equals("5")) {
+        while (!input.equals("8")) {
 
-            System.out.println("[1] - Add income");
-            System.out.println("[2] - Add expense");
-            System.out.println("[3] - Total incomes");
-            System.out.println("[4] - Total expenses");
-            System.out.println("[5] - Exit");
+            menu();
 
             input = scan.nextLine();
             switch (input) {
@@ -54,6 +50,42 @@ public class Main {
                     System.out.println("Total expenses: " + budget.getExpenses());
                     break;
                 case "5":
+                    System.out.println("Balance is: " + budget.getBalance());
+                    break;
+                case "6":
+                    budget.getAllIncomes();
+                    break;
+                case "7":
+
+                    while (!input.equals("3")) {
+
+                        System.out.println("[1] - See and delete income record");
+                        System.out.println("[2] - See and delete expense record");
+                        System.out.println("[3] - Exit");
+
+                        input = scan.nextLine();
+                        switch (input) {
+
+
+
+
+                            case "1":
+                                //delete income record
+                                break;
+                            case "2":
+                                //delete expense record
+                                break;
+                            case "3":
+                                //exit
+                                break;
+                            default:
+                                System.out.println("Unknown input");
+
+                        }
+                    }
+
+                    break;
+                case "8":
                     //exit
                     break;
                 default:
@@ -63,5 +95,16 @@ public class Main {
         }
 
 
+    }
+
+    private static void menu() {
+        System.out.println("[1] - Add income");
+        System.out.println("[2] - Add expense");
+        System.out.println("[3] - Total incomes");
+        System.out.println("[4] - Total expenses");
+        System.out.println("[5] - Check balance");
+        System.out.println("[6] - All incomes and expenses");
+        System.out.println("[7] - Delete record");
+        System.out.println("[8] - Exit");
     }
 }
