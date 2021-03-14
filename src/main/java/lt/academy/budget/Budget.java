@@ -9,6 +9,7 @@ public class Budget {
     private List<IncomeRecord> income;
     private List<ExpenseRecord> expense;
 
+
     public Budget() {
 
         income = new ArrayList<>();
@@ -73,13 +74,10 @@ public class Budget {
     }
 
     public void deleteIncomeRecord(int a) {
+        income.removeIf(incomes -> incomes.getIncomeCounter() == a);
+    }
 
-        for (IncomeRecord incomes : income) {
-            if (incomes.getIncomeCounter() == a) {
-                income.remove(incomes);
-            }
-
-        }
-
+    public void deleteExpenseRecord(int a) {
+        expense.removeIf(expenses -> expenses.getExpenseCounter() == a);
     }
 }

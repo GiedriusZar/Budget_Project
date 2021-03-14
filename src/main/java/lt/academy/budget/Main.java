@@ -78,6 +78,11 @@ public class Main {
                                 break;
                             case "2":
                                 budget.getAllExpenses();
+                                System.out.println("Enter the record index you want to delete");
+                                int b = scan.nextInt();
+                                scan.nextLine();
+                                budget.deleteExpenseRecord(b);
+                                System.out.println("Record with index: " + b + " successfully deleted");
                                 break;
                             case "3":
                                 break;
