@@ -54,6 +54,7 @@ public class Main {
                     break;
                 case "6":
                     budget.getAllIncomes();
+                    budget.getAllExpenses();
                     break;
                 case "7":
 

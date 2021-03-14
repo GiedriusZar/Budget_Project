@@ -5,7 +5,6 @@ import java.time.LocalDate;
 public class IncomeRecord {
 
 
-
     private float amount;
     private LocalDate date;
     private String categoryIndex;
@@ -14,7 +13,7 @@ public class IncomeRecord {
     private int incomeCounter;
 
 
-    public IncomeRecord(float amount, String categoryIndex, String toBank, String additionalInfo) {
+    public IncomeRecord(float amount, String categoryIndex, String type, String additionalInfo) {
         this.amount = amount;
         this.date = LocalDate.now();
         this.categoryIndex = categoryIndex;
@@ -69,5 +68,14 @@ public class IncomeRecord {
         return incomeCounter;
     }
 
-
+    @Override
+    public String toString() {
+        return "IncomeRecord: " +
+                "Amount: " + amount +
+                " | Record creation date: " + date +
+                " | Category: " + categoryIndex +
+                " | Cash or bank account: " + type +
+                " | Additional information: " + additionalInfo +
+                " | Record index: " + incomeCounter;
+    }
 }

@@ -62,9 +62,13 @@ public class Budget {
 
     public void getAllIncomes() {
         for (IncomeRecord incomes : income) {
-            System.out.println(incomes.getIncomeCounter());
+            System.out.println(incomes);
+        }
+    }
 
-
+    public void getAllExpenses() {
+        for (ExpenseRecord expenses : expense) {
+            System.out.println(expenses);
         }
 
 

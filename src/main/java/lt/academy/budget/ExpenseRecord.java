@@ -64,4 +64,16 @@ public class ExpenseRecord {
     public int getExpenseCounter() {
         return expenseCounter;
     }
+
+    @Override
+    public String toString() {
+        return "ExpenseRecord: " +
+                "Amount: " + amount +
+                " |  Record creation date: " + dateTime +
+                " |  Category: " + category +
+                " |  Cash or bank account: " + paymetType +
+                " |  Additional information: " + additionalInfo +
+                " |  Record index: " + expenseCounter ;
+    }
+
 }
