@@ -70,7 +70,16 @@ public class Budget {
         for (ExpenseRecord expenses : expense) {
             System.out.println(expenses);
         }
+    }
 
+    public void deleteIncomeRecord(int a) {
+
+        for (IncomeRecord incomes : income) {
+            if (incomes.getIncomeCounter() == a) {
+                income.remove(incomes);
+            }
+
+        }
 
     }
 }

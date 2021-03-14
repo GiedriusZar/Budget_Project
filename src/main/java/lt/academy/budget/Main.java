@@ -68,16 +68,18 @@ public class Main {
                         switch (input) {
 
 
-
-
                             case "1":
-                                //delete income record
+                                budget.getAllIncomes();
+                                System.out.println("Enter the record index you want to delete");
+                                int a = scan.nextInt();
+                                scan.nextLine();
+                                budget.deleteIncomeRecord(a);
+                                System.out.println("Record with index: " + a + " successfully deleted");
                                 break;
                             case "2":
-                                //delete expense record
+                                budget.getAllExpenses();
                                 break;
                             case "3":
-                                //exit
                                 break;
                             default:
                                 System.out.println("Unknown input");
@@ -87,7 +89,6 @@ public class Main {
 
                     break;
                 case "8":
-                    //exit
                     break;
                 default:
                     System.out.println("Unknown input");
